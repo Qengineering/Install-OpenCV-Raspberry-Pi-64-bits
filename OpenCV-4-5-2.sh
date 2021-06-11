@@ -4,7 +4,7 @@ echo "It will take minimal 1.5 hour !"
 cd ~
 # install the dependencies
 sudo apt-get install -y build-essential cmake git unzip pkg-config
-sudo apt-get install -y libjpeg-dev libpng-dev
+sudo apt-get install -y libjpeg-dev libtiff-dev libpng-dev
 sudo apt-get install -y libavcodec-dev libavformat-dev libswscale-dev
 sudo apt-get install -y libgtk2.0-dev libcanberra-gtk* libgtk-3-dev
 sudo apt-get install -y libxvidcore-dev libx264-dev
