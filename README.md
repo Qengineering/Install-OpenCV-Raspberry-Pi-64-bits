@@ -24,8 +24,10 @@ $ wget https://github.com/Qengineering/Install-OpenCV-Raspberry-Pi-64-bits/raw/m
 $ sudo chmod 755 ./OpenCV-4-5-x.sh
 $ ./OpenCV-4-5-x.sh
 ```
-If you want to bautify OpenCV with the Qt5 GUI you need to
+If you want to beautify OpenCV with the Qt5 GUI you need to
 - $ sudo apt-get install qt5-default
 - Set the -D WITH_QT=**ON** \ (± line 54) in the script<br/>
  
 before running the script on your RPi
+
+Don't forget to reset your swap memory afterwards.
