@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Installing OpenCV 4.5.2 on your Raspberry Pi 64-bit OS"
+echo "Installing OpenCV 4.5.3 on your Raspberry Pi 64-bit OS"
 echo "It will take minimal 1.5 hour !"
 cd ~
 # install the dependencies
