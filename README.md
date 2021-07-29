@@ -34,3 +34,13 @@ If you want to beautify OpenCV with the Qt5 GUI you need to
 - Set the -D WITH_QT=**ON** \ (± line 54) in the script<br/>
  
 before running the script on your RPi
+
+------------
+
+OpenCV will be installed to the `/usr/local` directory, all files will be copied to following locations:<br/>
+
+- `/usr/local/bin` - executable files<br/>
+- `/usr/local/lib` - libraries (.so)<br/>
+- `/usr/local/cmake/opencv4` - cmake package<br/>
+- `/usr/local/include/opencv4` - headers<br/>
+- `/usr/local/share/opencv4` - other files (e.g. trained cascades in XML format)<br/>
