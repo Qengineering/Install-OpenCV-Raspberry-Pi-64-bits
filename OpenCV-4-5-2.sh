@@ -18,6 +18,7 @@ sudo apt-get install -y protobuf-compiler
 
 # download the latest version
 cd ~ 
+sudo rm -rf opencv*
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.5.2.zip 
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.5.2.zip 
 # unpack
@@ -68,3 +69,7 @@ sudo ldconfig
 # cleaning (frees 300 MB)
 make clean
 sudo apt-get update
+
+echo "Congratulations!"
+echo "You've successfully installed OpenCV 4.5.2 on your Raspberry Pi 32-bit OS"
+
