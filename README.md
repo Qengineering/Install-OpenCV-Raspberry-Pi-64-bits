@@ -41,6 +41,6 @@ OpenCV will be installed to the `/usr/local` directory, all files will be copied
 
 - `/usr/local/bin` - executable files<br/>
 - `/usr/local/lib` - libraries (.so)<br/>
-- `/usr/local/cmake/opencv4` - cmake package<br/>
+- `/usr/local/lib/cmake/opencv4` - cmake package<br/>
 - `/usr/local/include/opencv4` - headers<br/>
 - `/usr/local/share/opencv4` - other files (e.g. trained cascades in XML format)<br/>
