@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 echo "Installing OpenCV 4.5.3 on your Raspberry Pi 64-bit OS"
 echo "It will take minimal 1.5 hour !"
 cd ~
