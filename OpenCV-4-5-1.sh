@@ -63,6 +63,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_NEW_PYTHON_SUPPORT=ON \
 -D BUILD_opencv_python3=TRUE \
 -D OPENCV_GENERATE_PKGCONFIG=ON \
+-D PYTHON3_PACKAGES_PATH=/usr/lib/python3/dist-packages \
 -D BUILD_EXAMPLES=OFF ..
 
 # run make
