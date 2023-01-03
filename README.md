@@ -14,6 +14,7 @@ For more information see [Q-engineering - Install OpenCV Raspberry Pi](https://q
 You must have allocated enough memory, otherwise the compilation, unfortunately, crashes after 2 hours at 100%
 ```
 # check your total memory (RAM + swap) first. You need at least a total of:
+# OpenCV 4.7.0 -> 6.5 GB!
 # OpenCV 4.6.0 -> 6.5 GB!
 # OpenCV 4.5.5 -> 6.5 GB!
 # OpenCV 4.5.4 -> 6.5 GB!
@@ -24,9 +25,9 @@ You must have allocated enough memory, otherwise the compilation, unfortunately,
 # if not, enlarge your swap space as explained in the guide
 $ free -m
 
-$ wget https://github.com/Qengineering/Install-OpenCV-Raspberry-Pi-64-bits/raw/main/OpenCV-4-5-x.sh
-$ sudo chmod 755 ./OpenCV-4-5-x.sh
-$ ./OpenCV-4-5-x.sh
+$ wget https://github.com/Qengineering/Install-OpenCV-Raspberry-Pi-64-bits/raw/main/OpenCV-4-7-0.sh
+$ sudo chmod 755 ./OpenCV-4-7-0.sh
+$ ./OpenCV-4-7-0.sh
 ```
 :point_right: Don't forget to reset your swap memory afterwards.
 
