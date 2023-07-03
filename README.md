@@ -28,7 +28,7 @@ $ free -m
 
 $ wget https://github.com/Qengineering/Install-OpenCV-Raspberry-Pi-64-bits/raw/main/OpenCV-4-8-0.sh
 $ sudo chmod 755 ./OpenCV-4-8-0.sh
-$ ./OpenCV-4-7-0.sh
+$ ./OpenCV-4-8-0.sh
 ```
 :point_right: Don't forget to reset your swap memory afterwards.
 
