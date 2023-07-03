@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 echo "Installing OpenCV 4.8.0 on your Raspberry Pi 64-bit OS"
-echo "It will take minimal 3.0 hour !"
+echo "It will take minimal 1.5 hour !"
 cd ~
 # install the dependencies
 sudo apt-get install -y build-essential cmake git unzip pkg-config
