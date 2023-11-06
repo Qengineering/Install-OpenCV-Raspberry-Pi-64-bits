@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+install_opencv () {
 echo "Installing OpenCV 4.8.0 on your Raspberry Pi 64-bit OS"
 echo "It will take minimal 2 hour !"
 cd ~
@@ -67,3 +68,25 @@ sudo apt-get update
 
 echo "Congratulations!"
 echo "You've successfully installed OpenCV 4.8.0 on your Raspberry Pi 64-bit OS"
+}
+
+cd ~
+
+if [ -d ~/opencv/build ]; then
+  echo " "
+  echo "You have a directory ~/opencv/build on your disk."
+  echo "Continuing the installation will replace this folder."
+  echo " "
+  
+  printf "Do you wish to continue (Y/n)?"
+  read answer
+
+  if [ "$answer" != "${answer#[Nn]}" ] ;then 
+      echo "Leaving without installing OpenCV"
+  else
+      install_opencv
+  fi
+else
+    install_opencv
+fi
+
