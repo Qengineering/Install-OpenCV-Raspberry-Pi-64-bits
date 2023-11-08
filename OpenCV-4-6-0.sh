@@ -1,7 +1,21 @@
 #!/bin/bash
 set -e
-echo "Installing OpenCV 4.6.0 on your Raspberry Pi 64-bit OS"
-echo "It will take minimal 2.0 hour !"
+install_opencv () {
+
+echo ""
+
+case `cat /etc/debian_version` in
+10*) echo "Detecting Debian 10, Buster. "
+	;;
+11*) echo "Detecting Debian 11, Bullseye. "
+	;;
+12*) echo "Detecting Debian 12, Bookworm. "
+	;;
+esac
+
+echo ""
+echo "Installing OpenCV 4.6.0"
+echo "It will take minimal 2 hour !"
 cd ~
 # install the dependencies
 sudo apt-get install -y build-essential cmake git unzip pkg-config
@@ -12,13 +26,20 @@ sudo apt-get install -y libgstreamer1.0-dev gstreamer1.0-gtk3
 sudo apt-get install -y libgstreamer-plugins-base1.0-dev gstreamer1.0-gl
 sudo apt-get install -y libxvidcore-dev libx264-dev
 sudo apt-get install -y python3-dev python3-numpy python3-pip
-sudo apt-get install -y libtbb2 libtbb-dev libdc1394-22-dev
 sudo apt-get install -y libv4l-dev v4l-utils
 sudo apt-get install -y libopenblas-dev libatlas-base-dev libblas-dev
 sudo apt-get install -y liblapack-dev gfortran libhdf5-dev
 sudo apt-get install -y libprotobuf-dev libgoogle-glog-dev libgflags-dev
 sudo apt-get install -y protobuf-compiler
-
+#get TBB
+case `cat /etc/debian_version` in
+10*) sudo apt-get install -y libtbb2 libtbb-dev libdc1394-22-dev
+	;;
+11*) sudo apt-get install -y libtbb2 libtbb-dev libdc1394-22-dev
+	;;
+12*) sudo apt-get install -y libtbbmalloc2 libtbb-dev
+	;;
+esac
 # download the latest version
 cd ~ 
 sudo rm -rf opencv*
@@ -75,3 +96,24 @@ sudo apt-get update
 
 echo "Congratulations!"
 echo "You've successfully installed OpenCV 4.6.0 on your Raspberry Pi 64-bit OS"
+}
+
+cd ~
+
+if [ -d ~/opencv/build ]; then
+  echo " "
+  echo "You have a directory ~/opencv/build on your disk."
+  echo "Continuing the installation will replace this folder."
+  echo " "
+  
+  printf "Do you wish to continue (Y/n)?"
+  read answer
+
+  if [ "$answer" != "${answer#[Nn]}" ] ;then 
+      echo "Leaving without installing OpenCV"
+  else
+      install_opencv
+  fi
+else
+    install_opencv
+fi
