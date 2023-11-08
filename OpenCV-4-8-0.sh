@@ -1,7 +1,19 @@
 #!/bin/bash
 set -e
 install_opencv () {
-echo "Installing OpenCV 4.8.0 on your Raspberry Pi 64-bit OS"
+echo ""
+
+case `cat /etc/debian_version` in
+10*) echo "Detecting Debian 10, Buster. "
+	;;
+11*) echo "Detecting Debian 11, Bullseye. "
+	;;
+12*) echo "Detecting Debian 12, Bookworm. "
+	;;
+esac
+
+echo ""
+echo "Installing OpenCV 4.8.0"
 echo "It will take minimal 2 hour !"
 cd ~
 # install the dependencies
@@ -13,12 +25,21 @@ sudo apt-get install -y libgstreamer1.0-dev gstreamer1.0-gtk3
 sudo apt-get install -y libgstreamer-plugins-base1.0-dev gstreamer1.0-gl
 sudo apt-get install -y libxvidcore-dev libx264-dev
 sudo apt-get install -y python3-dev python3-numpy python3-pip
-sudo apt-get install -y libtbb2 libtbb-dev libdc1394-22-dev
 sudo apt-get install -y libv4l-dev v4l-utils
 sudo apt-get install -y libopenblas-dev libatlas-base-dev libblas-dev
 sudo apt-get install -y liblapack-dev gfortran libhdf5-dev
 sudo apt-get install -y libprotobuf-dev libgoogle-glog-dev libgflags-dev
 sudo apt-get install -y protobuf-compiler
+
+#get TBB
+case `cat /etc/debian_version` in
+10*) sudo apt-get install -y libtbb2 libtbb-dev libdc1394-22-dev
+	;;
+11*) sudo apt-get install -y libtbb2 libtbb-dev libdc1394-22-dev
+	;;
+12*) sudo apt-get install -y libtbbmalloc2 libtbb-dev
+	;;
+esac
 
 # download the latest version
 cd ~ 
