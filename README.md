@@ -1,7 +1,7 @@
 # Install-OpenCV-Raspberry-Pi-64-bits
 ![output image]( https://qengineering.eu/images/LogoOpenRaspberryGitHub.webp )
 
-## OpenCV installation script for a Raspberry Pi with 64-bits OS
+## OpenCV installation script for a Raspberry Pi with 64-bits OS (Buster, Bullseye, Bookworm)
 
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)<br/>
 
@@ -18,10 +18,6 @@ You must have allocated enough memory, otherwise the compilation, unfortunately,
 # OpenCV 4.7.0 -> 6.5 GB!
 # OpenCV 4.6.0 -> 6.5 GB!
 # OpenCV 4.5.5 -> 6.5 GB!
-# OpenCV 4.5.4 -> 6.5 GB!
-# OpenCV 4.5.3 -> 6.5 GB!
-# OpenCV 4.5.2 -> 6.5 GB!
-# OpenCV 4.5.1 -> 5.5 GB
 # OpenCV 4.5.0 -> 5.5 GB
 # if not, enlarge your swap space as explained in the guide
 $ free -m
