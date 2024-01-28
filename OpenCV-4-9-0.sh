@@ -13,7 +13,7 @@ case `cat /etc/debian_version` in
 esac
 
 echo ""
-echo "Installing OpenCV 4.8.0"
+echo "Installing OpenCV 4.9.0"
 echo "It will take minimal 2 hour !"
 cd ~
 # install the dependencies
