@@ -31,9 +31,15 @@ $ ./OpenCV-4-8-0.sh
 ------------
 
 If you want to beautify OpenCV with the Qt5 GUI you need to
+```
+# Bookworm
+- $ sudo apt-get install qtbase5-dev
+# Other OS
 - $ sudo apt-get install qt5-default
-- Set the -D WITH_QT=**ON** \ (± line 54) in the script<br/>
- 
+
+# in the cmake list
+- Set the -D WITH_QT=**ON** \ (± line 54) in the script
+```
 before running the script on your RPi
 
 ------------
