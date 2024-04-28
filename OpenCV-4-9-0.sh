@@ -88,7 +88,7 @@ make clean
 sudo apt-get update
 
 echo "Congratulations!"
-echo "You've successfully installed OpenCV 4.8.0 on your Raspberry Pi 64-bit OS"
+echo "You've successfully installed OpenCV 4.9.0 on your Raspberry Pi 64-bit OS"
 }
 
 cd ~
