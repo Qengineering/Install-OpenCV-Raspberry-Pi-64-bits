@@ -13,7 +13,7 @@ case `cat /etc/debian_version` in
 esac
 
 echo ""
-echo "Installing OpenCV 4.9.0"
+echo "Installing OpenCV 4.10.0"
 echo "It will take minimal 2 hour !"
 cd ~
 # install the dependencies
@@ -44,8 +44,8 @@ esac
 # download the latest version
 cd ~ 
 sudo rm -rf opencv*
-wget -O opencv.zip https://github.com/opencv/opencv/archive/4.9.0.zip 
-wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.9.0.zip 
+git clone --depth=1 https://github.com/opencv/opencv.git
+git clone --depth=1 https://github.com/opencv/opencv_contrib.git
 
 # set install dir
 cd ~/opencv
@@ -88,7 +88,7 @@ make clean
 sudo apt-get update
 
 echo "Congratulations!"
-echo "You've successfully installed OpenCV 4.9.0 on your Raspberry Pi 64-bit OS"
+echo "You've successfully installed OpenCV 4.10.0 on your Raspberry Pi 64-bit OS"
 }
 
 cd ~
