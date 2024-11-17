@@ -37,7 +37,7 @@ case `cat /etc/debian_version` in
 	;;
 11*) sudo apt-get install -y libtbb2 libtbb-dev libdc1394-22-dev
 	;;
-12*) sudo apt-get install -y libtbbmalloc2 libtbb-dev
+12*) sudo apt-get install -y libtbbmalloc2 libtbb-dev libdc1394-dev gstreamer1.0-libcamera
 	;;
 esac
 
