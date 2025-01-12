@@ -41,25 +41,11 @@ case `cat /etc/debian_version` in
 	;;
 esac
 
-# remove old versions or previous builds
+# download the latest version
 cd ~ 
 sudo rm -rf opencv*
-
-# download the 4.10.0 version
-wget -O opencv.zip https://github.com/opencv/opencv/archive/4.10.0.zip 
-wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.10.0.zip 
-
-# unpack
-unzip opencv.zip 
-unzip opencv_contrib.zip 
-
-# Some administration to make life easier later on
-mv opencv-4.10.0 opencv
-mv opencv_contrib-4.10.0 opencv_contrib
-
-# clean up the zip files
-rm opencv.zip
-rm opencv_contrib.zip
+git clone --depth=1 https://github.com/opencv/opencv.git
+git clone --depth=1 https://github.com/opencv/opencv_contrib.git
 
 # set install dir
 cd ~/opencv
