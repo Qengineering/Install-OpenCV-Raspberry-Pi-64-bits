@@ -13,7 +13,7 @@ case `cat /etc/debian_version` in
 esac
 
 echo ""
-echo "Installing OpenCV 4.10.0"
+echo "Installing OpenCV 4.11.0"
 echo "It will take minimal 2 hour !"
 cd ~
 # install the dependencies
@@ -88,7 +88,7 @@ make clean
 sudo apt-get update
 
 echo "Congratulations!"
-echo "You've successfully installed OpenCV 4.10.0 on your Raspberry Pi 64-bit OS"
+echo "You've successfully installed OpenCV 4.11.0 on your Raspberry Pi 64-bit OS"
 }
 
 cd ~
