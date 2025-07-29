@@ -49,10 +49,6 @@ sudo rm -rf opencv*
 git clone --depth=1 https://github.com/opencv/opencv.git
 git clone --depth=1 https://github.com/opencv/opencv_contrib.git
 
-# unpack
-unzip opencv.zip 
-unzip opencv_contrib.zip 
-
 # set install dir
 cd ~/opencv
 mkdir build
