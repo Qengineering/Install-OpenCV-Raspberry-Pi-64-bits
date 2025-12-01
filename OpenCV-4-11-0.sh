@@ -10,6 +10,8 @@ case `cat /etc/debian_version` in
 	;;
 12*) echo "Detecting Debian 12, Bookworm. "
 	;;
+13*) echo "Detecting Debian 13, Trixie. "
+	;;
 esac
 
 echo ""
@@ -26,7 +28,18 @@ sudo apt-get install -y libgstreamer-plugins-base1.0-dev gstreamer1.0-gl
 sudo apt-get install -y libxvidcore-dev libx264-dev
 sudo apt-get install -y python3-dev python3-numpy python3-pip
 sudo apt-get install -y libv4l-dev v4l-utils
-sudo apt-get install -y libopenblas-dev libatlas-base-dev libblas-dev
+
+case `cat /etc/debian_version` in
+13*)
+    # Debian 13 Trixie: libatlas-base-dev removed, use openblas instead
+    sudo apt-get install -y libopenblas-dev libblas-dev
+    ;;
+*)
+    # Older Debian versions can still install atlas package
+    sudo apt-get install -y libopenblas-dev libatlas-base-dev libblas-dev
+    ;;
+esac
+
 sudo apt-get install -y liblapack-dev gfortran libhdf5-dev
 sudo apt-get install -y libprotobuf-dev libgoogle-glog-dev libgflags-dev
 sudo apt-get install -y protobuf-compiler
@@ -38,6 +51,8 @@ case `cat /etc/debian_version` in
 11*) sudo apt-get install -y libtbb2 libtbb-dev libdc1394-22-dev
 	;;
 12*) sudo apt-get install -y libtbbmalloc2 libtbb-dev libdc1394-dev gstreamer1.0-libcamera
+	;;
+13*) sudo apt-get install -y libtbbmalloc2 libtbb-dev libdc1394-dev gstreamer1.0-libcamera
 	;;
 esac
 
